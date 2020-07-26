@@ -1,0 +1,133 @@
+@import '../../../app.scss';
+
+.profile{
+  display: block;
+  width : 700px;
+  margin: 0 auto;
+  height: 200px;
+
+  @include sm{
+    width: 80%;
+  }
+
+  @include md{
+    width: 80%;
+  }
+
+  &__tabs{
+
+    @include sm{
+      width: 95%;
+    }
+   
+    width: 75%;
+    margin: 0 auto;
+    border-top: 1px solid lightgray;
+    .react-tabs__tab-list{
+     display:flex;
+     justify-content: space-around;
+     border: 0;
+
+     .react-tabs__tab{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       color: #c7c5c5;
+
+       .icon{
+         margin-right: 10px;
+         font-size: 13px;
+       }
+     }
+    }
+    .react-tabs__tab-panel{
+      margin-top: 60px;
+    }
+    .react-tabs__tab--selected{
+     border-radius: 0;
+     border: 0;
+     position: relative;
+
+     &::before{
+       content: '';
+       display: inline-block;
+       width: 100%;
+       height: 3px;
+       background-color: grey;
+       position: absolute;
+       top: -3px;
+       left: -1px;
+     }
+    }
+  }
+
+  &__user{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 30px;
+
+    @include md{
+      flex-direction: column;
+    }
+
+    &__avatar{
+      border: 1px solid grey;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+     @include sm{
+      margin: 0 auto;
+     }
+     @include md{
+      margin: 0 auto;
+     }
+    }
+
+    &__info{
+      margin-top: 60px;
+      margin-left: 60px;
+
+      .count{
+        display: flex;
+        justify-content: center;
+        align-items: space-between
+      }
+
+      @include sm{
+        margin: 0
+      }
+
+      @include md{
+        margin : 15px 0px 0px 0px;
+      }
+      p{
+     
+        color: grey;
+        font-weight: 500;
+        font-size: 30px;
+      }
+      span{
+        display: inline-block;
+        color: lightgrey;
+        margin: 10px 5px;
+      }
+    }
+  }
+}
+
+
+.no-users{
+    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: gray;
+  font-size: 20px;
+
+  span{
+    margin: 0 20px;
+  }
+
+}

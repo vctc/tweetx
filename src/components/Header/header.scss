@@ -1,0 +1,109 @@
+
+@import '../../app.scss';
+
+.header{
+ 
+  height: 80px;
+
+  box-shadow: 8px 8px 8px -3px rgba(0,0,0,.1);
+
+  @include sm {
+    height: 50px;
+}
+
+@include md{
+  height: 50px;
+}
+ 
+  &.no_shadow{
+    box-shadow: none;
+  }
+
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0px 120px;
+
+    @include sm {
+      margin: 0px 40px;
+  }
+  @include md {
+    margin: 0px 40px;
+}
+  }
+
+  &__logo{
+  
+    a{
+    text-decoration: none;
+    color:$primary-color ;
+    font-weight: 900;
+    font-size: 30px;
+    }
+
+    @include sm{
+      font-size: 20px;
+    }
+    @include md{
+      font-size: 20px;
+    }
+  }
+
+  &__menus {
+
+    @include sm{
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+    }
+
+ @include md{
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+ }
+
+   
+   &__logout__button{
+
+    @include sm{
+      height: 25px !important;
+      width: 50px !important;
+      font-size: 12px !important;
+      margin-left: 5px !important;
+    }
+
+    @include md{
+      height: 30px;
+      width: 50px;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+ 
+}
+
+    &_link{
+      text-decoration: none;
+      color: $menu-color;
+      margin: 0 25px;
+      font-weight: 500;
+      font-size: 20px;
+     
+      @include sm{
+        // margin: 10px 10px;
+        font-size: 14px;
+      }
+      @include md{
+        margin: 10px 10px;
+        font-size: 14px;
+      }
+  
+      &.active{
+        color: $primary-color;
+      }
+    }
+  }
+
+}

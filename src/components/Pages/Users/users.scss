@@ -1,0 +1,107 @@
+@import '../../../app.scss';
+
+.users__container{
+ display: block;
+  width: 700px;
+  margin: 0px auto;
+
+  @include sm{
+    width: 80%;
+  }
+
+  @include md{
+    width: 80%;
+  }
+
+  .users{
+
+    margin: 60px 30px;
+
+    @include sm{
+      margin: 40px 5px;
+    }
+
+    .no-users{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        color: gray;
+        font-size: 20px;
+    
+        span{
+          margin: 0 20px;
+        }
+      
+    }
+    
+  
+  }
+}
+
+.single__user{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid rgb(204, 191, 191);
+  padding-bottom: 25px;
+
+  &__avatar{
+    border: 1px solid #eee;
+    padding: 30px;
+    margin: 30px 15px 15px 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+
+    @include sm{
+      padding: 20px;
+      height: 30px;
+      width:30px;
+    }
+  }
+
+  &__main{
+    flex: 1;
+    color: #8f8888;
+
+    margin-left: 20px;
+    &__name{
+      font-size: 20px;
+      margin-bottom: 5px;
+
+      @include sm{
+        font-size: 14px;
+      }
+    }
+
+    &__follow{
+      font-size: 12px;
+      font-weight: 300;
+
+      @include sm{
+        font-size: 10px;
+      }
+
+
+    }
+
+  }
+
+  &__button{
+    margin: 10px 30px;
+
+    @include sm{
+      height: 25px !important;
+      font-size: 10px !important;
+      margin: 10px !important;
+      width: 60px !important;
+    }
+  
+  }
+}
+
+.no-border{
+  border-bottom: none;
+}
