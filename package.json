@@ -20,7 +20,7 @@
     "styled-components": "5.1.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "typescript": "3.8.3"
   },
   "scripts": {
